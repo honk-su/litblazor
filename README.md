@@ -1,2 +1,2 @@
-# honkjs
-Blazor-inspired web components based library  
+# HonkJs
+Blazor-inspired LIT web components based library  
