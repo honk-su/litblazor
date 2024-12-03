@@ -1,4 +1,4 @@
-import { ComponentBase, html, Tag, Page } from 'honkjs';
+import { ComponentBase, html, Tag, Page } from '@honk-su/honkjs';
 
 @Tag('home-page')
 @Page('/')

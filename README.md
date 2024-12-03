@@ -46,21 +46,18 @@ npm start
 Create a new component called `Counter.ts`:
 
 ```typescript
-import { Component, Property, State } from "honkjs";
+import { ComponentBase, html, Page, property, Tag } from '@honk-su/honkjs';
 
-@Component({
-    selector: "app-counter",
-    template: `
-        <h1>{{ count }}</h1>
-        <button (click)="increment()">Increment</button>
-    `
-})
-export class Counter {
-    @Property()
-    count = 0;
-
-    increment() {
-        this.count++;
+@Tag('counter-page')
+@Page('/counter')
+export class CounterPage extends ComponentBase {
+    @property({ type: Number }) count = 0;
+    render() {
+        return html`
+            <h1>Counter</h1>
+            <p>Current count: ${this.count}</p>
+            <button class="btn btn-success" @click=${() => this.count++}>Increment</button>
+        `;
     }
 }
 ```
@@ -68,23 +65,11 @@ export class Counter {
 Use the `Counter` component in your main application:
 
 ```typescript
-import { Component, Property, State } from "honkjs";
-import { Counter } from "./Counter";
-
-@Component({
-    selector: "app-root",
-    template: `
-        <h1>Welcome to HonkJS!</h1>
-        <app-counter></app-counter>
-    `,
-    components: [
-        Counter
-    ]
-})
-export class App {
-    // ...
-}
+import './components/pages/counter-page';
 ```
+
+Take a look into [sample application](https://github.com/honk-su/honkjs/tree/main/sampleapp)
+to get know how to organize your components structure
 
 ## Documentation
 -------------

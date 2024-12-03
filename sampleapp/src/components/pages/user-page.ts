@@ -1,4 +1,4 @@
-import { ComponentBase, html, Inject, property, Page, Tag } from 'honkjs';
+import { ComponentBase, html, Inject, property, Page, Tag } from '@honk-su/honkjs';
 import { UserService } from '../../_imports';
 
 @Tag('user-page')

@@ -1,4 +1,4 @@
-import { ComponentBase, html, Page, property, Tag } from 'honkjs';
+import { ComponentBase, html, Page, property, Tag } from '@honk-su/honkjs';
 
 @Tag('counter-page')
 @Page('/counter')
@@ -12,5 +12,3 @@ export class CounterPage extends ComponentBase {
         `;
     }
 }
-
-

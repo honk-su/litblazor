@@ -1,4 +1,4 @@
-import { ComponentBase, css, html, property, Tag } from 'honkjs';
+import { ComponentBase, css, html, property, Tag } from '@honk-su/honkjs';
 
 @Tag('nav-link')
 export class NavLink extends ComponentBase {
@@ -9,7 +9,7 @@ export class NavLink extends ComponentBase {
     static styles = css`
         a {
             text-decoration: none;
-            color: #333;
+            color: #fff;
             padding: 0.5rem 1rem;
             margin: 0 0.5rem;
             white-space: nowrap;
