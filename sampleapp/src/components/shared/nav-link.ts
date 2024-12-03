@@ -1,4 +1,4 @@
-import { ComponentBase, css, html, property, Tag } from '../../../../core/src/component-base';
+import { ComponentBase, css, html, property, Tag } from 'honkjs';
 
 @Tag('nav-link')
 export class NavLink extends ComponentBase {

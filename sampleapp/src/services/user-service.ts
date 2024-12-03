@@ -1,5 +1,4 @@
-import { Injectable } from '../../../core/src/di';
-import { ServiceLifetime } from '../../../core/src/di';
+import { Injectable, ServiceLifetime } from 'honkjs';
 
 interface User {
     id: string;

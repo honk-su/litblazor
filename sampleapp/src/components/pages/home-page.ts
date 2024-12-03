@@ -1,4 +1,4 @@
-import { ComponentBase, html, Tag, Page } from '../../../../core/src/component-base';
+import { ComponentBase, html, Tag, Page } from 'honkjs';
 
 @Tag('home-page')
 @Page('/')

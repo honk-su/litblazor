@@ -2,11 +2,14 @@
   "name": "honkjs",
   "private": true,
   "version": "0.0.1",
-  "type": "module",
+  "description": "Blazor inspired web component framework.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Honk.su corp",
+  "license": "MIT",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "lit": "^3.2.1"

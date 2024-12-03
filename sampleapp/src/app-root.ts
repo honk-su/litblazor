@@ -1,13 +1,15 @@
-import { ComponentBase, Component, html, css, Inject } from '../../core/src/component-base';
-import './_imports'; 
-import './index.css';
-
-import '../../core/src/router';
+import './_imports';
+import './styles/index.css';
 import './components/shared/nav-link';
 
-import { UserService } from './services/user-service';
+import './components/pages/home-page';
+import './components/pages/counter-page';
+import './components/pages/user-page';
 
-@Component({ tag: 'app-root'})
+import { UserService } from './services/user-service';
+import { ComponentBase, css, html, Inject, Tag } from 'honkjs';
+
+@Tag('app-root')
 export class AppRoot extends ComponentBase {
   static styles = css`
         :host {
@@ -25,6 +27,25 @@ export class AppRoot extends ComponentBase {
         }
     `;
 
+  render() {
+    return html`
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2 sidebar">
+              <nav>
+                <nav-link href="/">Home</nav-link>
+                <nav-link href="/counter">Counter</nav-link>
+                <nav-link href="/user/123">User Profile</nav-link>
+              </nav>
+            </div>
+            <div class="col-md-10 main-content">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      `;
+  }
+
   @Inject(UserService)
   private userService!: UserService;
 
@@ -37,23 +58,5 @@ export class AppRoot extends ComponentBase {
   // Disable Shadow DOM
   createRenderRoot() {
     return this;
-  }
-  render() {
-    return html`
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-2 sidebar">
-                <nav>
-                  <nav-link href="/">Home</nav-link>
-                  <nav-link href="/counter">Counter</nav-link>
-                  <nav-link href="/user/123">User Profile</nav-link>
-                </nav>
-              </div>
-              <div class="col-md-10 main-content">
-                <router-outlet></router-outlet>
-              </div>
-            </div>
-          </div>
-        `;
   }
 }
