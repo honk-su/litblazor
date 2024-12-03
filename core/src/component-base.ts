@@ -34,19 +34,6 @@ export class ComponentBase extends LitElement {
     }
 }
 
-//obsolete
-export function Component(config: {
-    tag: string,
-    route?: string,
-}) {
-    return function (target: any) {
-        if (config.route) {
-            Route(config.route)(target);
-        }
-        return customElement(config.tag)(target);
-    };
-}
-
 // Page decorator
 export function Page(route: string) {
     return function (target: any) {
