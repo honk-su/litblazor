@@ -7,7 +7,7 @@ import './components/pages/counter-page';
 import './components/pages/user-page';
 
 import { UserService } from './services/user-service';
-import { ComponentBase, css, html, Inject, Tag } from '@honk-su/honkjs';
+import { ComponentBase, css, html, Inject, Tag } from 'litblazor';
 
 @Tag('app-root')
 export class AppRoot extends ComponentBase {
@@ -47,9 +47,5 @@ export class AppRoot extends ComponentBase {
     super.connectedCallback();
 
     this.userService.setUser({ id: '1', name: 'John Doe' });
-  }
-  // Disable Shadow DOM
-  createRenderRoot() {
-    return this;
   }
 }

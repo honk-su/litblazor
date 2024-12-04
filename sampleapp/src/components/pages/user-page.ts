@@ -1,4 +1,4 @@
-import { ComponentBase, html, Inject, property, Page, Tag } from '@honk-su/honkjs';
+import { ComponentBase, html, Inject, property, Page, Tag } from 'litblazor';
 import { UserService } from '../../_imports';
 
 @Tag('user-page')

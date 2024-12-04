@@ -1,4 +1,4 @@
-import { ComponentBase, html, Page, property, Tag } from '@honk-su/honkjs';
+import { ComponentBase, html, Page, property, Tag } from 'litblazor';
 
 @Tag('counter-page')
 @Page('/counter')

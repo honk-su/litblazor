@@ -1,12 +1,9 @@
-# HonkJS
-=========
-
-[The goose is loose!]
+# Litblazor
 
 ## Overview
 ------------
 
-HonkJS is a fresh, fast, and lightweight framework inspired by Blazor. It leverages modern and trendy web components to provide a robust and scalable solution for building web applications.
+Litblazor is a fresh, fast, and lightweight framework inspired by Blazor. It leverages modern and trendy web components to provide a robust and scalable solution for building web applications.
 
 ## Key Features
 ---------------
@@ -22,14 +19,14 @@ HonkJS is a fresh, fast, and lightweight framework inspired by Blazor. It levera
 ## Getting Started
 -----------------
 
-1. Install HonkJS via npm:
+1. Install Litblazor via npm:
 ```
-npm install honkjs
+npm install litblazor
 ```
 
-2. Create a new HonkJS project:
+2. Create a new Litblazor project:
 ```
-npx honkjs init my-app
+npx Litblazor init my-app
 ```
 
 3. Start the development server:
@@ -46,7 +43,7 @@ npm start
 Create a new component called `Counter.ts`:
 
 ```typescript
-import { ComponentBase, html, Page, property, Tag } from '@honk-su/honkjs';
+import { ComponentBase, html, Page, property, Tag } from 'litblazor';
 
 @Tag('counter-page')
 @Page('/counter')
@@ -68,28 +65,28 @@ Use the `Counter` component in your main application:
 import './components/pages/counter-page';
 ```
 
-Take a look into [sample application](https://github.com/honk-su/honkjs/tree/main/sampleapp)
+Take a look into [sample application](https://github.com/honk-su/Litblazor/tree/main/sampleapp)
 to get know how to organize your components structure
 
 ## Documentation
 -------------
 
-For more information on how to use HonkJS, check out the [official documentation](https://honkjs.com/docs).
+For more information on how to use Litblazor, check out the [official documentation](https://Litblazor.com/docs).
 
 ## Contributing
 ------------
 
-If you'd like to contribute to HonkJS, please check out the [contribution guidelines](https://github.com/your-username/honkjs/blob/main/CONTRIBUTING.md).
+If you'd like to contribute to Litblazor, please check out the [contribution guidelines](https://github.com/your-username/Litblazor/blob/main/CONTRIBUTING.md).
 
 ## License
 -------
 
-HonkJS is licensed under the [MIT License](https://github.com/your-username/honkjs/blob/main/LICENSE).
+Litblazor is licensed under the [MIT License](https://github.com/your-username/Litblazor/blob/main/LICENSE).
 
 ## About
 ------
 
-HonkJS is a passion project created by [Your Name] and the HonkJS community.
+Litblazor is a passion project created by [Your Name] and the Litblazor community.
 
 ### The Goose is Loose!
 
@@ -97,12 +94,12 @@ HonkJS is a passion project created by [Your Name] and the HonkJS community.
 
 ### Logo
 
-![HonkJS Logo](https://avatars.githubusercontent.com/u/189227806?s=400&u=c384a9b9e7579e9f7050ab95611a578f84145bc9&v=4)
+![Litblazor Logo](https://avatars.githubusercontent.com/u/189227806?s=400&u=c384a9b9e7579e9f7050ab95611a578f84145bc9&v=4)
 
 ### Social Media
 
-[Follow HonkJS on Twitter](https://twitter.com/honkjs)
+[Follow Litblazor on Twitter](https://twitter.com/Litblazor)
 
-[Join the HonkJS Discord server](https://discord.gg/honkjs)
+[Join the Litblazor Discord server](https://discord.gg/Litblazor)
 
-[Subscribe to the HonkJS YouTube channel](https://www.youtube.com/channel/UC123456789)
+[Subscribe to the Litblazor YouTube channel](https://www.youtube.com/channel/UC123456789)

@@ -1,4 +1,4 @@
-import { ComponentBase, css, html, property, Tag } from '@honk-su/honkjs';
+import { ComponentBase, css, html, property, Tag } from 'litblazor';
 
 @Tag('nav-link')
 export class NavLink extends ComponentBase {
