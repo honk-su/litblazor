@@ -1,51 +1,21 @@
-import './_imports';
-import './styles/index.css';
-import './components/shared/nav-link';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
-import './components/pages/home-page';
-import './components/pages/counter-page';
-import './components/pages/user-page';
+import './app.css';
+import './Layout/nav-menu';
 
-import { UserService } from './services/user-service';
-import { ComponentBase, css, html, Inject, Tag } from 'litblazor';
+import './pages/home-page';
+import './pages/counter-page';
+import './pages/weather-page';
 
-@Tag('app-root')
+import { ComponentBase, customElement, html } from 'litblazor';
+import { MainLayout } from './Layout/main-layout';
+
+@customElement('app-root')
 export class AppRoot extends ComponentBase {
-  static styles = css`
-      :host {
-        display: block;
-        padding: 1rem;
-      }
-    `;
-
   render() {
     return html`
-        <div class="container-fluid h-100">
-          <div class="d-flex h-100">
-            <div class="sidebar col-md-2">
-              <nav>
-                <nav-link href="/">Home</nav-link>
-                <nav-link href="/counter">Counter</nav-link>
-                <nav-link href="/user/123">User Profile</nav-link>
-              </nav>
-            </div>
-            <div class="main-content col-md-10">
-              <div style="margin: 8px">
-                <router-outlet></router-outlet>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-  }
-
-  @Inject(UserService)
-  private userService!: UserService;
-
-  connectedCallback() {
-
-    super.connectedCallback();
-
-    this.userService.setUser({ id: '1', name: 'John Doe' });
+      <router-outlet .defaultLayout="${MainLayout}"></router-outlet>
+    `;
   }
 }

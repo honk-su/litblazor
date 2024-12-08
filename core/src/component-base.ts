@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { Inject } from './di';
-import { Route } from './router';
+import { route } from './router';
 
 export {
     html,
@@ -10,12 +10,11 @@ export {
     property,
     state,
     Inject,
-    Route
+    route
 };
 
 export class ComponentBase extends LitElement {
     protected static useShadowDom = false;
-
     // Override createRenderRoot to respect the `useShadowDom` setting
     createRenderRoot() {
         if ((this.constructor as typeof ComponentBase).useShadowDom) {
@@ -24,26 +23,11 @@ export class ComponentBase extends LitElement {
             return this; // Light DOM
         }
     }
-
-    protected logger(message: string) {
-        console.log(`[${this.tagName}] ${message}`);
-    }
-
-    protected handleError(error: Error) {
-        console.error(`[${this.tagName}] Error:`, error);
-    }
 }
 
 // Page decorator
-export function Page(route: string) {
+export function page(path: string) {
     return function (target: any) {
-        Route(route)(target);
-    };
-}
-
-// Tag decorator
-export function Tag(tag: string) {
-    return function (target: any) {
-        return customElement(tag)(target);
+        route(path)(target);
     };
 }

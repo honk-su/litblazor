@@ -1,6 +1,6 @@
-import { ComponentBase, css, html, property, Tag } from 'litblazor';
+import { ComponentBase, css, customElement, html, property } from './component-base';
 
-@Tag('nav-link')
+@customElement('nav-link')
 export class NavLink extends ComponentBase {
     @property() href = '';
 

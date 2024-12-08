@@ -1,9 +1,9 @@
-import { ComponentBase, html, Page, property, Tag } from 'litblazor';
+import { ComponentBase, customElement, html, page, state } from 'litblazor';
 
-@Tag('counter-page')
-@Page('/counter')
+@customElement('counter-page')
+@page('/counter')
 export class CounterPage extends ComponentBase {
-    @property({ type: Number }) count = 0;
+    @state() count = 0;
     render() {
         return html`
             <h1>Counter</h1>
