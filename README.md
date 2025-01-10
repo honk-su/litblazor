@@ -45,8 +45,8 @@ Create a new component called `Counter.ts`:
 ```typescript
 import { ComponentBase, html, Page, property, Tag } from 'litblazor';
 
-@Tag('counter-page')
-@Page('/counter')
+@customElement('counter-page')
+@page('/counter')
 export class CounterPage extends ComponentBase {
     @property({ type: Number }) count = 0;
     render() {
